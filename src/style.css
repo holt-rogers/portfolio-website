@@ -1,0 +1,56 @@
+:root {
+    --background-color: rgb(56, 56, 56);
+    --text-color: rgb(221, 221, 221);
+    --mid-color: rgb(131, 131, 131);
+    --default-side-marigin: 50px; 
+    --default-font-size: 24px;
+}
+
+h1{
+    margin-left: var(--default-side-marigin);
+    margin-right: 20px;
+
+    margin-top: 100px;
+
+    font-size: 88px;
+    color: var(--text-color);
+}
+
+hr{
+    border: none;
+    height: 1px;
+    background-color: var(--mid-color);
+
+
+}
+
+.navbar ul{
+    padding: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: var(--default-side-marigin);
+    margin-right: var(--default-side-marigin);
+    list-style-type: none;
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+.navbar button{
+    /* remove default hideous styling */
+    background: none; 
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+    -webkit-appearance: none; 
+    -moz-appearance: none;    
+    appearance: none; 
+
+    color: var(--text-color);
+    font: inherit;
+    font-size: var(--default-font-size);
+}
+
+.navbar li{
+    float: left;
+    padding-right: 35px;
+}
