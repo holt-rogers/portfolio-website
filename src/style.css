@@ -1,18 +1,26 @@
 :root {
-    --background-color: rgb(56, 56, 56);
+    --background-color: rgb(48, 48, 48);
     --text-color: rgb(221, 221, 221);
     --mid-color: rgb(131, 131, 131);
-    --default-side-marigin: 50px; 
+    --default-side-marigin: 70px; 
     --default-font-size: 24px;
 }
 
 h1{
     margin-left: var(--default-side-marigin);
-    margin-right: 20px;
-
+    margin-right: var(--default-side-marigin);
     margin-top: 100px;
-
     font-size: 88px;
+    color: var(--text-color);
+}
+
+
+
+p{
+    margin-left: var(--default-side-marigin);
+    margin-right: var(--default-side-marigin);
+    margin-top: 100px;
+    font-size: var(--default-font-size);
     color: var(--text-color);
 }
 
@@ -20,8 +28,6 @@ hr{
     border: none;
     height: 1px;
     background-color: var(--mid-color);
-
-
 }
 
 .navbar ul{
@@ -50,7 +56,15 @@ hr{
     font-size: var(--default-font-size);
 }
 
-.navbar li{
-    float: left;
-    padding-right: 35px;
+
+.icon {
+    vertical-align: middle; 
 }
+
+.socialsbar{
+    position: relative;
+    margin-left: var(--default-side-marigin);
+    margin-right: var(--default-side-marigin);
+    margin-top: 100px;
+}
+
