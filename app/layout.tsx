@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className= "border-b border-white/10 px-17 py-6">
+        <header className= "border-b border-white/10 px-22 py-6">
           <nav className="flex justify-between items-center">
             <div className="flex items-center space-x-10">
               <Link href="/" className = "text-gray-200 hover:text-white font-medium hover:underline">
