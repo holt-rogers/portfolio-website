@@ -19,7 +19,7 @@ h3{
     margin-left: var(--default-side-marigin);
     margin-right: var(--default-side-marigin);
     color: var(--text-color);
-    font-size: 64px;
+    font-size: 48px;
     margin-top: 100px;
 }
 
@@ -35,6 +35,11 @@ hr{
     border: none;
     height: 1px;
     background-color: var(--mid-color);
+}
+
+.navbar{
+    position: sticky;
+    top: 30px; 
 }
 
 .navbar ul{
@@ -64,7 +69,7 @@ hr{
 }
 
 .navbar button:hover{
-    text-decoration: underline;
+    color: white;
 }
 
 
