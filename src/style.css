@@ -6,6 +6,7 @@
     --default-font-size: 24px;
 }
 
+
 h1{
     margin-left: var(--default-side-marigin);
     margin-right: var(--default-side-marigin);
@@ -14,7 +15,13 @@ h1{
     color: var(--text-color);
 }
 
-
+h3{
+    margin-left: var(--default-side-marigin);
+    margin-right: var(--default-side-marigin);
+    color: var(--text-color);
+    font-size: 64px;
+    margin-top: 100px;
+}
 
 p{
     margin-left: var(--default-side-marigin);
@@ -56,6 +63,10 @@ hr{
     font-size: var(--default-font-size);
 }
 
+.navbar button:hover{
+    text-decoration: underline;
+}
+
 
 .icon {
     vertical-align: middle; 
@@ -68,3 +79,14 @@ hr{
     margin-top: 100px;
 }
 
+.iconlink{
+    font-size: 48px; 
+    color: var(--text-color); 
+    padding-right: 60px; 
+    text-decoration: none;
+}
+
+.iconlink:hover{
+    color: white;
+
+}
