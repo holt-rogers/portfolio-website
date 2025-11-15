@@ -159,6 +159,8 @@ hr{
 .project-container {
     display: flex;
 
+    height: 500px;
+
     gap: 10px; 
 
     margin-left: var(--default-side-marigin);
@@ -177,7 +179,12 @@ hr{
     text-align: left;
     font-size: var(--description-font-size);
     color: var(--text-color);
+    overflow: hidden;
     
+}
+.project-description-content{
+    overflow-y: hidden; 
+    overflow-x: hidden; 
 }
 
 .slidebarbutton{
