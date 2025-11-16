@@ -30,7 +30,7 @@
 
     <h1>Welcome :)</h1>
 
-    <p>
+    <p class = aboutMe>
     My name is Ethan Rogers. I am studying computer engineering at the University of Virginia. 
     In my free time, I love low level programming, designing cool electronics and fencing. 
     Check out the projects I've worked on. 
@@ -56,11 +56,11 @@
     </h3>
 
     <div class="project-container">
-        <div id = projectList style="display: flex; flex-direction: column; overflow: hidden; width: 94%;">
+        <div id = projectList style="display: flex; flex-direction: column; overflow: hidden; width: 100%;">
 
         </div>
 
-        <div id = projectBarrier style="display: flex; flex-direction: column; overflow: hidden; width: 6%;">
+        <div id = projectBarrier style="display: flex; flex-direction: column; overflow: hidden; width: 0%;">
             <div style="display: flex; height: 100%;">
                 <button class = slidebarbutton id = "leftExpand">
                     <i class="fa-solid fa-caret-left" id = "leftlabel"></i>
@@ -73,14 +73,12 @@
         </div>
 
         <div id = projectDescription class = project-description style="display: flex; flex-direction: column; overflow: hidden; width: 0%;">
-            <div id = "projectDescriptionContent"; class = .project-description-content>
-            The next movement in paragraph development is an explanation of each example and its relevance to the topic sentence. The explanation should demonstrate the value of the example as evidence to support the major claim, or focus, in your paragraph.
-            Continue the pattern of giving examples and explaining them until all points/examples that the writer deems necessary have been made and explained. NONE of your examples should be left unexplained. You might be able to explain the relationship between the example and the topic sentence in the same sentence which introduced the example. More often, however, you will need to explain that relationship in a separate sentence
+            <div id = "projectDescriptionContent"; class = project-description-content>
+
             </div>
         </div>
 
     </div>
-
     <script type="module">
  
         import { createProjectList, leftArrow, rightArrow } from "./scripts/projects.js";

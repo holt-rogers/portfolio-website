@@ -1,13 +1,16 @@
 import {projectTitles } from "./project-data.js"
 import { projectFiles } from "./project-data.js";
 
+
 // initialize initial project list
 export function createProjectList(){
 
     projectTitles.forEach((project, index) => {
         const button = document.createElement('button');
         button.classList.add('projectbutton');
-        button.onclick = openProject(project.id)
+        button.addEventListener('click', (event) => {
+            openProject(project.id)
+        })
 
         const title = document.createElement('p');
         title.textContent = project.title;
@@ -156,17 +159,31 @@ function setDescription(){
     if (position == 1){
         const projectDescription = document.getElementById("projectDescription");
         const computedStyle = window.getComputedStyle(projectDescription);
-
-        
-
         const projectDescriptionContent = document.getElementById("projectDescriptionContent")
-        projectDescriptionContent.style.minWidth = computedStyle.width;
+        projectDescriptionContent.style.minWidth = parseInt(computedStyle.width) - 10 + "px";
+
+        const root = document.documentElement;
+        root.style.setProperty('--image-width', computedStyle.width); 
     }
 }
 
 
 // open a project
-function openProject(id){
+async function openProject(id){
     const data = projectFiles[id];
-    const descriptionDiv = document.getElementById("projectDescription")
+    const descriptionDiv = document.getElementById("projectDescriptionContent");
+    const response = await fetch("../descriptions/format/" + projectFiles[id]);
+
+    if (response.ok){
+        descriptionDiv.innerHTML = await response.text();
+    }
+
+
+
+    if (position == 0){
+        leftArrow();
+        document.getElementById("projectBarrier").style.width = barPercent + "%";
+    }
+        
+
 }

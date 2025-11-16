@@ -7,6 +7,8 @@
     --default-font-size: 24px;
     --description-font-size: 20px;
     --small-heading: 32px;
+
+    --image-width: 100%;
 }
 
 
@@ -27,7 +29,7 @@ h3{
     margin-bottom: 30px;
 }
 
-p{
+.aboutMe{
     margin-left: var(--default-side-marigin);
     margin-right: var(--default-side-marigin);
     margin-top: 100px;
@@ -181,10 +183,7 @@ hr{
     color: var(--text-color);
     overflow: hidden;
     
-}
-.project-description-content{
-    overflow-y: hidden; 
-    overflow-x: hidden; 
+    
 }
 
 .slidebarbutton{
@@ -205,4 +204,40 @@ hr{
 
 .slidebarbutton:hover{
     color: white;
+}
+
+.project-description-content{
+    overflow-y: scroll; 
+    overflow-x: hidden; 
+    padding-right: 5px;
+    scrollbar-gutter: stable;
+}
+
+/* set scroll bar fro over content*/
+
+
+.project-description-content::-webkit-scrollbar {
+    width: 5px; /* or height for horizontal scrollbar */
+}
+
+.project-description-content::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+.project-description-content::-webkit-scrollbar-thumb {
+    background: var(--highlight-color);
+    border-radius: 4px;
+}
+
+.project-description-content::-webkit-scrollbar-thumb:hover {
+    background: var(--mid-color);
+}
+
+
+
+
+img {
+
+    width: var(--image-width);
+    height: auto;
 }
