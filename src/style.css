@@ -241,3 +241,12 @@ img {
     width: var(--image-width);
     height: auto;
 }
+
+.experience-div{
+    display: flex;
+    font-size: var(--default-font-size);
+    color: var(--text-color);
+    margin-left: var(--default-side-marigin);
+    margin-right: var(--default-side-marigin);
+    padding-top: 30px;
+}

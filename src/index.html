@@ -14,9 +14,9 @@
     <nav class="navbar">
 
         <ul>
-            <li style="float:left; padding-right:35px"><button> About </button></li>
-            <li style="float:left; padding-right:35px"><button> Projects </button></li>
-            <li style="float:left; padding-right:35px"><button> Experience </button></li>
+            <li style="float:left; padding-right:35px"><button id = "about-button" > About </button></li>
+            <li style="float:left; padding-right:35px"><button id = "projects-button" > Projects </button></li>
+            <li style="float:left; padding-right:35px"><button id = "experience-button"> Experience </button></li>
             <li style="float:right;"><a target="_blank" rel="noopener noreferrer" href="https://github.com/ethan-rogers/portfolio-website" style="font-size: 18px; color: var(--mid-color);">
 
                 <i class="fa-brands fa-github" style="left: 0; top: 50%; transform: translateY(11%);"></i>
@@ -80,7 +80,9 @@
 
     </div>
     <script type="module">
- 
+        import {setupScrollCheck} from "./scripts/scroll-bar.js";
+        setupScrollCheck();
+        
         import { createProjectList, leftArrow, rightArrow } from "./scripts/projects.js";
         createProjectList();
 
@@ -92,9 +94,63 @@
     </script>
 
 
-    <h3>
+    <h3 style="padding-bottom: 0px;">
         My Experience    
     </h3>
+
+    <div class = experience-div>
+        <div style="display: flex; font-size: var(--description-font-size); flex-direction: column; color: var(--mid-color); width: 25%;">
+            Fall 2025 - Present
+        </div>
+        <div style="display: flex; flex-direction: column; width: 75%;">
+            Alterea Inc - Game Development Intern
+            <p style="font-size: var(--description-font-size); color: var(--mid-color);">
+                Unity | C#
+            </p>
+            <p style="font-size: var(--description-font-size);"">
+                Alterea Inc is developing Agents of Influence, a game funded by the Department of Education meant to teach media literacy and critical thinking. 
+                I worked using AI voice over technology to make the game playable by fully blind users.
+                I also was responsible for fixing issues with the code used handle the games sound and audio mixing.
+            </p>
+        </div>
+    </div>
+
+    <div class = experience-div>
+        <div style="font-size: var(--description-font-size); display: flex; flex-direction: column; color: var(--mid-color); width: 25%;">
+            Fall 2025 - Present
+        </div>
+        <div style="display: flex; flex-direction: column; width: 75%;">
+            UVA Rocketry - Electronics Subteam Member
+            <p style="font-size: var(--description-font-size); color: var(--mid-color);">
+                PCB Design | Altium 
+            </p>
+            <p style="font-size: var(--description-font-size); ">
+                UVA Rocketry competes in the International Rocket Engineering Competition. 
+                My responsbility was to design the PCB that allowed the rocket to communicate with the ground station.
+                This PCB used transcievers that recieved the radio signals from the rocket to display its altitude, speed and GPS cordinates. 
+            </p>
+        </div>
+    </div>
+
+    <div class = experience-div>
+        <div style="font-size: var(--description-font-size); display: flex; flex-direction: column; color: var(--mid-color); width: 25%;">
+            Fall 2023 - Spring 2024
+        </div>
+        <div style="display: flex; flex-direction: column; width: 75%;">
+            Jefferson Lab Mentorship
+            <p style="font-size: var(--description-font-size); color: var(--mid-color);">
+                Python | Jupyter Notebook
+            </p>
+            <p style="font-size: var(--description-font-size); padding-top: 0px;">
+                Jefferson Lab is home of the Continuous Electron Beam Accelerator Facility. 
+                During the mentorship program, 
+                I worked with a JLAB physicsit to code an artificial neural network that was capable of calculating the deep inelastic scattering variables using data from the simulated Electron-Ion Collider.
+                The code and results of this project can be found <a style = "color: white" target="_blank" rel="noopener noreferrer" href="https://github.com/ethan-rogers/EIC_JLAB_analysis">here</a>.
+            </p>
+        </div>
+    </div>
+
+    <div style = "margin-top: 100px;"></div>
 
   </body>
 </html>
